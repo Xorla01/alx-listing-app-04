@@ -1,15 +1,17 @@
 export interface CardProps {
-    name: string;
-    price: number;
-    rating: number;
-    image: string;
+  property: PropertyProps;
 }
 
 export interface ButtonProps {
-  
+  label: string;
+  onPress?: () => void;
+  onClick?: () => void; 
+  variant?: "primary" | "secondary" | "outline";
+  disabled?: boolean;
 }
 
 export interface PropertyProps {
+  id: number;
   name: string;
   address: {
     state: string;
